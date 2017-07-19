@@ -1,6 +1,6 @@
 <?php
 // Connect to MySQL
-$conn = mysqli_connect("localhost", "root", "LNFjE4sVpbbP", "shoutit");
+$conn = mysqli_connect("localhost", "$hidden_username", "$hidden_pwd", "shoutit");
 
 // Test connection
 if(mysqli_connect_errno()){
