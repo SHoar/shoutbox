@@ -65,6 +65,13 @@ width:100%;
 margin: 10px auto;
 }
 
+.error {
+background:red;
+color:#ffffff;
+padding:5px;
+margin-bottom:5px;
+}
+
 @media only screen and (max-width: 930px){
 #input input[type="text"]{
 width:98%;

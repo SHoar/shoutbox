@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 	// Create Select Query
 	$query = "SELECT * FROM shouts";
 	$shouts = mysqli_query($conn, $query);
+	$error = isset($array["error"]) ? $array["error"]: "";
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,8 +27,8 @@ error_reporting(E_ALL);
 			</ul>	
 		</div>
 		<div id="input"> 
-			<?php if(!isset($_GET['submit'])) : ?>
-				<div class="error"><?php echo $_GET['error']; ?></div>
+			<?php if(isset($_GET["error"])) : ?>
+				<div class="error"><?php echo $_GET["error"]; ?></div>
 			<?php endif; ?>
 			<form method="post" action="process.php">
 				<input type="text" name="user" placeholder="Enter Your Name" />
